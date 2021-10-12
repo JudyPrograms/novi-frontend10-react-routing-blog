@@ -36,3 +36,67 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*******NAV-BAR********/
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: rosybrown;
+}
+
+.navbar a {
+  color: saddlebrown;
+  text-decoration: none;
+  margin-right: 5vw;
+}
+
+/****HOME-PAGE****/
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/****LOGIN-PAGE****/
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: saddlebrown;
+  color: white;
+  margin-top: 50px;
+}
+
+/****OVERVIEW-PAGE****/
+
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/****POSTS-PAGE****/
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}

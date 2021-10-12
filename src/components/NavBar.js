@@ -1,23 +1,23 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 
 function NavBar() {
     return (
 
         <nav className="navbar">
-            <Link to="/">
+            <NavLink to="/" exact activeClassName="active-link">
                 <span>HOME</span>
-            </Link>
-            <Link to="/login">
+            </NavLink>
+            <NavLink to="/login" activeClassName="active-link">
                 <span>LOGIN</span>
-            </Link>
-            <Link to="/overview">
+            </NavLink>
+            <NavLink to="/overview" activeClassName="active-link">
                 <span>OVERVIEW</span>
-            </Link>
-            <Link to="/post">
+            </NavLink>
+            <NavLink to="/post/1" activeClassName="active-link">
                 <span>POST</span>
-            </Link>
+            </NavLink>
         </nav>
 
     );

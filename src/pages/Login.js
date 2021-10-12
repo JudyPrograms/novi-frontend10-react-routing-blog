@@ -1,19 +1,18 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom';
+import Button from '../components/Button';
 
 function Login() {
 
-    function handleClick() {
-
-    }
+    const history = useHistory()
 
     return (
         <div className="login-container">
-        <button
-            onClick={handleClick}>
-            INLOGGEN
-        </button>
+            <Button handleClick={() => history.push('/overview')}>
+                LOGIN
+            </Button>
         <p>
-            Deze knop stuurt je naar 'Overview'
+            This button sends you to 'Overview'
         </p>
         </div>
     );

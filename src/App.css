@@ -37,23 +37,6 @@
   }
 }
 
-
-/*******NAV-BAR********/
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: rosybrown;
-}
-
-.navbar a {
-  color: saddlebrown;
-  text-decoration: none;
-  margin-right: 5vw;
-}
-
 /****HOME-PAGE****/
 
 .home-container {
@@ -61,7 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 /****LOGIN-PAGE****/
@@ -71,14 +54,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-button {
-  padding: 10px;
-  border-radius: 5px;
-  background-color: saddlebrown;
-  color: white;
-  margin-top: 50px;
+  font-style: italic;
 }
 
 /****OVERVIEW-PAGE****/
@@ -87,8 +63,16 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+  align-items: flex-start;
+  margin: 50px 20vw 100px 20vw;
+}
+
+ul {
+  padding: 0 0 0 18px;
+}
+
+li {
+  margin-bottom: 5px;
 }
 
 /****POSTS-PAGE****/
@@ -96,7 +80,21 @@ button {
 .posts-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+  align-items: flex-start;
+  margin: 50px 20vw 100px 20vw;
+}
+
+article {
+  border-bottom: rosybrown 1px dashed;
+  padding-bottom: 50px;
+}
+
+.posts-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-between;
+  margin: 0 20vw 0 20vw;
+  gap: 2vw;
+  position: fixed;
+  bottom: 25vh;
 }

@@ -1,0 +1,24 @@
+button {
+    width: 12rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: hsl(25, 76%, 31%);
+    color: white;
+    margin-top: 100px;
+    font-size: 1.2rem;
+}
+
+.small-button {
+    width: 6rem;
+    font-size: 0.8rem;
+}
+
+button:hover {
+    background-color: hsl(25, 76%, 34%);
+}
+
+button:active {
+    background-color: hsl(25, 76%, 38%);
+}
+
+

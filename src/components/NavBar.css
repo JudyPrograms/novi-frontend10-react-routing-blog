@@ -1,0 +1,19 @@
+/*******NAV-BAR********/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rosybrown;
+}
+
+a {
+    color: saddlebrown;
+    text-decoration: none;
+    margin-right: 5vw;
+}
+
+.active-link {
+    color: lightgoldenrodyellow;
+}

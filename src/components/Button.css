@@ -11,6 +11,7 @@ button {
 .small-button {
     width: 6rem;
     font-size: 0.8rem;
+    margin-top: 0;
 }
 
 button:hover {

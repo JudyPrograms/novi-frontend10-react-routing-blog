@@ -11,16 +11,28 @@ import NavBar from "./components/NavBar";
 
 function App() {
     // We houden in de state bij of iemand is "ingelogd" (simpele versie)
-    const [isAuthenticated] = useState(false);
+    const [isAuth, setIsAuth] = useState(false);
 
     return (
         <div>
-            <NavBar/>
+            <NavBar isAuth={isAuth} setIsAuth={setIsAuth}/>
             <Switch>
-                <Route exact path="/"><Home/></Route>
-                <Route path="/login"><Login/></Route>
-                <Route path="/overview"><Overview/></Route>
-                <Route path="/post/:num"><Post/></Route>
+                <Route exact path="/">
+                    <Home/>
+                </Route>
+                <Route path="/login">
+                    <Login setIsAuth={setIsAuth}/>
+                </Route>
+                {isAuth &&
+                    <>
+                <Route exact path="/blogposts">
+                    <Overview/>
+                </Route>
+                <Route path="/blogposts/:num">
+                    <Post/>
+                </Route>
+                    </>
+                }
             </Switch>
         </div>
     );

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {useParams, useHistory} from 'react-router-dom';
 import posts from '../data/posts.json';
 import Button from "../components/Button";
@@ -7,15 +7,9 @@ function Post() {
 
     const history = useHistory()
 
-    const num = useParams()
+    const {num} = useParams()
 
-    const [postId, setPostId] = useState(parseInt(num.num))
-    const [post, setPost] = useState(posts[postId - 1])
-
-    useEffect(() => {
-        history.push('/post/' + postId)
-        setPost(posts[postId - 1])
-    }, [postId])
+    const post = posts[num-1]
 
     return (
         <>
@@ -29,10 +23,11 @@ function Post() {
                 </article>
             </div>
             <div className="posts-buttons">
-                <Button size={"small-button"} handleClick={() => postId > 1 && setPostId(postId-1)}>
+
+                <Button size={"small-button"} handleClick={() => num > 1 && history.push(`/blogposts/${parseInt(num)-1}`)}>
                     PREVIOUS
                 </Button>
-                <Button size={"small-button"} handleClick={() => postId < posts.length && setPostId(postId+1)}>
+                <Button size={"small-button"} handleClick={() => num < posts.length && history.push(`/blogposts/${parseInt(num)+1}`)}>
                     NEXT
                 </Button>
             </div>
